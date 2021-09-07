@@ -28,12 +28,13 @@ class CampaignIndex extends React.Component {
       <Layout>
         <div>
           <h2>Campaigns Index!</h2>
-          {this.renderCampaigns()}
           <Button
+            floated="right"
             content="Create Campaign"
             icon="add"
             primary
           />
+          {this.renderCampaigns()}
         </div>
       </Layout>
     );
