@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import Layout from "../../components/layout"
-import campaignFn from "../../ethereum/campaign";
-import { Card } from "semantic-ui-react";
-import { ethers } from "../../ethereum/ethers";
-import BigNumber from "bignumber.js";
+import Layout from "../../components/Layout"
+import ContributeForm from "../../components/ContributeForm"; 
+import { Card, Grid } from "semantic-ui-react";
 import 'semantic-ui-css/semantic.min.css';
+
+import campaignFn from "../../ethereum/campaign";
+import { ethers } from "../../ethereum/ethers";
 
 class CampaignShow extends Component {
   static async getInitialProps(props) {
@@ -65,8 +66,15 @@ class CampaignShow extends Component {
   render() {
     return (
       <Layout>
-      <h3>Campaign Show</h3>
-      {this.renderCards()}
+        <h3>Campaign Show</h3>
+        <Grid>
+          <Grid.Column width = {10}>
+            {this.renderCards()}
+          </Grid.Column>
+          <Grid.Column width = {6}>
+            <ContributeForm />
+          </Grid.Column>
+        </Grid>
       </Layout>
     );
   }
