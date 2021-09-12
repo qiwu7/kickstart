@@ -7,7 +7,6 @@ import 'semantic-ui-css/semantic.min.css';
 class RequestIndex extends React.Component {
   static async getInitialProps(props) {
     const { address } = props.query;
-    console.log(`campaigns/${address}/requests/new`);
     return { address };
   }
 
