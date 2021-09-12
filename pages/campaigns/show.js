@@ -14,6 +14,7 @@ class CampaignShow extends Component {
     const summary = await campaign.getSummary();
 
     return {
+      address: props.query.address,
       minimumContribution: parseInt(summary[0]),
       balance: parseInt(summary[1]),
       requestsCount: parseInt(summary[2]),
@@ -72,7 +73,7 @@ class CampaignShow extends Component {
             {this.renderCards()}
           </Grid.Column>
           <Grid.Column width = {6}>
-            <ContributeForm />
+            <ContributeForm address={this.props.address}/>
           </Grid.Column>
         </Grid>
       </Layout>
