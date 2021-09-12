@@ -3,7 +3,7 @@ import { ethers, provider } from "./ethers";
 import CampaignFactory from "./build/CampaignFactory";
 
 const factoryContract = new ethers.Contract(
-  "0x502c9fe7B6B73A93833b440bA54B364820b42fD1", 
+  "0x8B1F8463Df09CeCe1A970CFd72A3a19A634ba8bc", 
   JSON.parse(CampaignFactory.interface), 
   provider
 ); 

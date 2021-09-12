@@ -7,7 +7,7 @@ const fs = require('fs');
 const mnemonicFilePath = path.resolve(__dirname, "mnemonic.txt");
 const mnemonic = fs.readFileSync(mnemonicFilePath, "utf8");
 
-const ROPSTEN_URL = "https://ropsten.infura.io/v3/a0f543f3aee84be8b737f8a5f89ed9b8"
+const ROPSTEN_URL = "https://ropsten.infura.io/v3/212009411b2846588674ff677abf0fa5"
 const provider = new HDWalletProvider(mnemonic, ROPSTEN_URL);
 const web3 = new Web3(provider);
 
