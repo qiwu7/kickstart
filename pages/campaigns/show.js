@@ -17,7 +17,7 @@ class CampaignShow extends Component {
     return {
       address: props.query.address,
       minimumContribution: parseInt(summary[0]),
-      balance: parseInt(summary[1]),
+      balance: ethers.utils.formatEther(summary[1]),
       requestsCount: parseInt(summary[2]),
       approversCount: parseInt(summary[3]),
       manager: summary[4]
@@ -56,7 +56,7 @@ class CampaignShow extends Component {
         description: "Number of people who have already donated to this campaign."
       },
       {
-        header: ethers.utils.formatUnits(balance),
+        header: balance,
         meta: "Campaign Balance (ether)",
         description: "The balance is how much money this campaign has left to spend."
       }
