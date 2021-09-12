@@ -9,6 +9,7 @@ import Layout from "../../components/layout";
 import "semantic-ui-css/semantic.min.css";
 import factory from "../../ethereum/factory";
 import { signer } from "../../ethereum/ethers";
+import { Router } from "../../routes";
 
 class CampaignNew extends React.Component {
   state = {
@@ -33,6 +34,7 @@ class CampaignNew extends React.Component {
     }
 
     this.setState({loading: false});
+    Router.pushRoute("/");
   };
 
   render() {
